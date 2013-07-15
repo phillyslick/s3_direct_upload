@@ -19,7 +19,7 @@ module S3DirectUpload
           region: S3DirectUpload.config.region || "s3",
           url: S3DirectUpload.config.url,
           ssl: true,
-          acl: "public-read",
+          acl: S3DirectUpload.config.acl,
           expiration: S3DirectUpload.config.expiration,
           max_file_size: 500.megabytes,
           callback_method: "POST",
