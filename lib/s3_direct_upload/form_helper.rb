@@ -20,7 +20,7 @@ module S3DirectUpload
           url: S3DirectUpload.config.url,
           ssl: true,
           acl: "public-read",
-          expiration: 10.hours.from_now.utc.iso8601,
+          asdasexpiration: 10.hours.from_now.utc.iso8601,
           max_file_size: 500.megabytes,
           callback_method: "POST",
           callback_param: "file",
