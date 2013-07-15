@@ -5,6 +5,7 @@ Multi file uploading supported by jquery-fileupload.
 
 Code extracted from Ryan Bates' [gallery-jquery-fileupload](https://github.com/railscasts/383-uploading-to-amazon-s3/tree/master/gallery-jquery-fileupload).
 
+This branch exposes the expiration option to the S3DirectUpload initializer and sets the request header to force the download of object.
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -20,6 +21,7 @@ S3DirectUpload.config do |c|
   c.bucket = ""              # your bucket name
   c.region = nil             # region prefix of your bucket url (optional), eg. "s3-eu-west-1"
   c.url = nil                # S3 API endpoint (optional), eg. "https://#{c.bucket}.s3.amazonaws.com/"
+	c.expiration = 42.minutes.from_now
 end
 ```
 
